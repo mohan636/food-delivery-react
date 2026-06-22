@@ -1,0 +1,116 @@
+.login-popup {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #00000090;
+  display: grid;
+}
+.login-popup-container {
+  place-self: center;
+  width: max(23vw, 330px);
+  color: #808080;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px 30px;
+  border-radius: 8px;
+  font-size: 14px;
+  animation: fadeIn 0.5s;
+}
+.login-popup-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+.login-popup-title img {
+  width: 16px;
+  cursor: pointer;
+}
+.login-popup-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.login-popup-inputs input {
+  outline: none;
+  border: 1px solid #c9c9c9;
+  padding: 10px;
+  border-radius: 4px;
+}
+.login-popup-container button {
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+  background-color: #ff4c24;
+  font-size: 15px;
+  cursor: pointer;
+}
+.login-popup-container button:disabled {
+  background-color: #d3d3d3;
+  color: #888888;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.login-popup-container button:not(:disabled):hover {
+  background-color: #e63e18;
+  transition: 0.3s;
+}
+
+.login-popup-container button:not(:disabled):active {
+  transform: scale(0.98);
+}
+.login-popup-condition {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  margin-top: -15px;
+}
+
+.login-popup-condition input {
+  margin-top: 5px;
+}
+
+.login-popup p span {
+  color: #ff4c24;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.success-message,
+.error-message {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.success-message {
+  background: #d4edda;
+  border: 1px solid #28a745;
+  color: #155724;
+}
+
+.error-message {
+  background: #f8d7da;
+  border: 1px solid #dc3545;
+  color: #721c24;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

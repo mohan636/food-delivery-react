@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS kitchen_tickets (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    order_id BIGINT NOT NULL,
+    ticket_number VARCHAR(50) NOT NULL UNIQUE,
+    status VARCHAR(20) NOT NULL,
+    items_detail VARCHAR(500) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

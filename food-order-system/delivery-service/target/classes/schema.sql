@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS deliveries (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    order_id BIGINT NOT NULL,
+    courier_name VARCHAR(100) NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    delivery_address VARCHAR(255) NOT NULL,
+    delivered_at TIMESTAMP NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
